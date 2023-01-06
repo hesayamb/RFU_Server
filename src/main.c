@@ -1,7 +1,11 @@
-#include <stdio.h>
+#include "connectivity/Socket.h"
 
-int main(int argc, char** argv) {
+int main() {
 
-	printf("Hello RFU\n");
-	return 0;
+    http_t* http = CreateHttp();
+    if(http != NULL)
+    {
+        StartServer(http);
+    }
+    return 0;
 }
